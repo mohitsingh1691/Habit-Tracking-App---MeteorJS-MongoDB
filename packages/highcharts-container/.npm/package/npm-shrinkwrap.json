@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "highcharts": {
+      "version": "4.2.1",
+      "resolved": "https://registry.npmjs.org/highcharts/-/highcharts-4.2.1.tgz",
+      "from": "highcharts@4.2.1"
+    }
+  }
+}

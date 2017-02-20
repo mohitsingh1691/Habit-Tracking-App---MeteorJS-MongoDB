@@ -1,0 +1,97 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<style>
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+</style>
+</head>
+
+
+<template name="layout">
+{{#if currentUser}}
+<div class="animated fadeIn">
+  <input type="checkbox" id="sidebartoggler1">
+
+<div class="page-wrapper">
+
+<label class="toggle1" for="sidebartoggler1">☰</label>
+
+<div class="headerdesign">
+
+<input type="search" id="datepicker" class="datepicker">
+
+<div class="todaydate">
+{{displaytodaydate}}
+</div>
+
+<div class="page-logo">
+  <a><img src="logo.png" alt="logo" class="logo-default"></a>
+</div>
+<!--<span class="text">{{formatDate checkedAt}}</span>//-->
+
+<div class="wrapper-p">
+
+<div class="progress">
+<a href="{{pathFor 'progress'}}"><img src="progress.png" width="35px" height="35px"></a>
+</div>
+
+<div class="welcome">
+<span align="right"><strong>{{currentUser.username}}</strong></span>
+</div>
+
+<div class="login-p">
+<a href="{{pathFor 'loginform'}}"><img src="logout.png" width="35px" height="35px"></a>
+</div>
+
+</div>
+</div>
+
+<div class="page-content">
+
+<div id="wrapper-s">
+
+<div class="{{#if lessthan avgdayscore totalscore1 }}scoresgt{{else}}scores{{/if}}">
+  <button><span>{{totalscore1}}</span></button>
+</div>
+
+<div class="score_avg">
+  <button><span>{{avgdayscore}}</span></button>
+</div>
+
+</div>
+
+<div class="contain"><span class="inner">
+
+  <ul id="tasklist">
+{{#transition in="flipInX" out="flipInX"}}
+      {{#each tasks}}
+
+        {{> task}}
+
+      {{/each}}
+{{/transition}}
+    </ul>
+
+</span>
+
+</div>​
+
+
+<footer>
+{{> addbutton}}
+</footer>
+
+</div>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="http://www.habituapp.com">Home</a></li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Contact</li>
+
+  </ul>
+</div>
+</div>
+</div>
+{{/if}}
+</template>

@@ -1,0 +1,54 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+</head>
+
+<template name="addhabit">
+<div class="animated flipInY">
+  <div class="container">
+<div class="card"></div>
+<div class="card">
+<h1 class="title">Add Habit</h1>
+   <form class="new-task">
+     <div class="input-container">
+
+       <input type="text" name="text" placeholder="Add new habit" maxlength="25"/>
+
+       <div class="bar"></div>
+      
+     </div>
+<ul class="rbutton">
+
+  <li>
+    <input type="radio" id="low" name="myRadio" value="2"/>
+      <label for="low">Low</label>
+    </li>
+    <li>
+    <input type="radio" id="medium" name="myRadio" value="5"/>
+    <label for="medium">Medium</label>
+  </li>
+  <li>
+    <input type="radio" id="high" name="myRadio" value="10"/>
+    <label for="high">High</label>
+</li>
+</ul>
+    <div class="space">
+    </div>
+<div class="button-container">
+
+      <button><span>Add</span></button>
+    </div>
+
+</form>
+<div class="space">
+</div>
+
+
+<form class="reco">
+<div class="input-container">
+<div class="footer"><a href="{{pathFor 'recommended'}}">Habit Ideas</a></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</template>

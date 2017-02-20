@@ -1,0 +1,12 @@
+{
+  "name": "habitU",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "chart.js": "^2.2.2",
+    "highcharts": "^5.0.0",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

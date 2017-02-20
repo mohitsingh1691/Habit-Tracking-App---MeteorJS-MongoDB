@@ -1,0 +1,17 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<style>
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+</style>
+</head>
+
+<template name="home">
+
+<body>
+  {{#if currentUser}}
+  {{> layout}}
+  {{else}}
+    {{> loginform}}
+    {{/if}}
+</body>
+</template>

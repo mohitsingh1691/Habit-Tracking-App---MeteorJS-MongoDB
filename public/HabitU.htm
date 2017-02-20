@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="./HabitU_files/merged-stylesheets.css">
+<title>HabitU</title>
+
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body data-gr-c-s-loaded="true">
+
+
+
+<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.4.0.1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22development%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22appId%22%3A%221v2pn7n1jbklfu1hg4tnm%22%2C%22autoupdateVersion%22%3A%22bfcd2be13ed49a40bc75add65f0cdc4614f84c44%22%2C%22autoupdateVersionRefreshable%22%3A%22a4dd6c047498da017195156af1adfc2506477b9e%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script>
+
+  <script type="text/javascript" src="./HabitU_files/underscore.js"></script>
+  <script type="text/javascript" src="./HabitU_files/meteor.js"></script>
+  <script type="text/javascript" src="./HabitU_files/meteor-base.js"></script>
+  <script type="text/javascript" src="./HabitU_files/mobile-experience.js"></script>
+  <script type="text/javascript" src="./HabitU_files/modules-runtime.js"></script>
+  <script type="text/javascript" src="./HabitU_files/modules.js"></script>
+  <script type="text/javascript" src="./HabitU_files/es5-shim.js"></script>
+  <script type="text/javascript" src="./HabitU_files/promise.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ecmascript-runtime.js"></script>
+  <script type="text/javascript" src="./HabitU_files/babel-compiler.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ecmascript.js"></script>
+  <script type="text/javascript" src="./HabitU_files/base64.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ejson.js"></script>
+  <script type="text/javascript" src="./HabitU_files/id-map.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ordered-dict.js"></script>
+  <script type="text/javascript" src="./HabitU_files/tracker.js"></script>
+  <script type="text/javascript" src="./HabitU_files/babel-runtime.js"></script>
+  <script type="text/javascript" src="./HabitU_files/random.js"></script>
+  <script type="text/javascript" src="./HabitU_files/mongo-id.js"></script>
+  <script type="text/javascript" src="./HabitU_files/diff-sequence.js"></script>
+  <script type="text/javascript" src="./HabitU_files/geojson-utils.js"></script>
+  <script type="text/javascript" src="./HabitU_files/minimongo.js"></script>
+  <script type="text/javascript" src="./HabitU_files/check.js"></script>
+  <script type="text/javascript" src="./HabitU_files/retry.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ddp-common.js"></script>
+  <script type="text/javascript" src="./HabitU_files/reload.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ddp-client.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ddp.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ddp-server.js"></script>
+  <script type="text/javascript" src="./HabitU_files/allow-deny.js"></script>
+  <script type="text/javascript" src="./HabitU_files/mongo.js"></script>
+  <script type="text/javascript" src="./HabitU_files/blaze-html-templates.js"></script>
+  <script type="text/javascript" src="./HabitU_files/reactive-var.js"></script>
+  <script type="text/javascript" src="./HabitU_files/jquery.js"></script>
+  <script type="text/javascript" src="./HabitU_files/standard-minifier-css.js"></script>
+  <script type="text/javascript" src="./HabitU_files/standard-minifier-js.js"></script>
+  <script type="text/javascript" src="./HabitU_files/reactive-dict.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ddp-rate-limiter.js"></script>
+  <script type="text/javascript" src="./HabitU_files/localstorage.js"></script>
+  <script type="text/javascript" src="./HabitU_files/callback-hook.js"></script>
+  <script type="text/javascript" src="./HabitU_files/deps.js"></script>
+  <script type="text/javascript" src="./HabitU_files/htmljs.js"></script>
+  <script type="text/javascript" src="./HabitU_files/observe-sequence.js"></script>
+  <script type="text/javascript" src="./HabitU_files/blaze.js"></script>
+  <script type="text/javascript" src="./HabitU_files/accounts-base.js"></script>
+  <script type="text/javascript" src="./HabitU_files/service-configuration.js"></script>
+  <script type="text/javascript" src="./HabitU_files/spacebars.js"></script>
+  <script type="text/javascript" src="./HabitU_files/templating.js"></script>
+  <script type="text/javascript" src="./HabitU_files/session.js"></script>
+  <script type="text/javascript" src="./HabitU_files/npm-bcrypt.js"></script>
+  <script type="text/javascript" src="./HabitU_files/sha.js"></script>
+  <script type="text/javascript" src="./HabitU_files/srp.js"></script>
+  <script type="text/javascript" src="./HabitU_files/accounts-password.js"></script>
+  <script type="text/javascript" src="./HabitU_files/less.js"></script>
+  <script type="text/javascript" src="./HabitU_files/accounts-ui-unstyled.js"></script>
+  <script type="text/javascript" src="./HabitU_files/accounts-ui.js"></script>
+  <script type="text/javascript" src="./HabitU_files/coffeescript.js"></script>
+  <script type="text/javascript" src="./HabitU_files/webtempest_animate.js"></script>
+  <script type="text/javascript" src="./HabitU_files/ui.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_core.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_dynamic-template.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_layout.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_url.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_middleware-stack.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_location.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_controller.js"></script>
+  <script type="text/javascript" src="./HabitU_files/iron_router.js"></script>
+  <script type="text/javascript" src="./HabitU_files/momentjs_moment.js"></script>
+  <script type="text/javascript" src="./HabitU_files/webapp.js"></script>
+  <script type="text/javascript" src="./HabitU_files/livedata.js"></script>
+  <script type="text/javascript" src="./HabitU_files/hot-code-push.js"></script>
+  <script type="text/javascript" src="./HabitU_files/launch-screen.js"></script>
+  <script type="text/javascript" src="./HabitU_files/autoupdate.js"></script>
+  <script type="text/javascript" src="./HabitU_files/global-imports.js"></script>
+  <script type="text/javascript" src="./HabitU_files/app.js"></script>
+
+
+
+
+
+  
+  
+  
+  
+  
+
+  
+  <div class="contain"><span class="inner">
+    <header class="header">
+    <h1 align="center">HabitU</h1><h1>23</h1>
+
+      <a href="http://localhost:3000/addhabit">ADD</a>
+      <a href="http://localhost:3000/loginform">LOGIN</a>
+      <div class="button-container">
+      <button class="filterfilter">LAST 7 DAYS</button>
+    </div>
+      <a href="http://localhost:3000/last7days">LAST 7 DAYS</a>
+    <div id="login-buttons" class="login-buttons-dropdown-align-">
+    
+      
+        
+    <div class="login-link-and-dropdown-list">
+    <a class="login-link-text" id="login-name-link">
+      mohit ▾
+    </a>
+
+    
+  </div>
+  
+      
+    
+  </div>
+
+    </header>
+
+    
+    <ul>
+    
+    
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">09-29-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">09-29-2016</span>
+    <span class="text">Go to Gym</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">09-29-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">09-30-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-01-2016</span>
+    <span class="text">go study </span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-01-2016</span>
+    <span class="text">sleep</span>
+    <span class="score">20</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-01-2016</span>
+    <span class="text">Go to Gym</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-01-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-03-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-03-2016</span>
+    <span class="text">Go to Gym</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-04-2016</span>
+    <span class="text">is this working now ?</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-04-2016</span>
+    <span class="text">asddd</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-04-2016</span>
+    <span class="text">frerwfr</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-04-2016</span>
+    <span class="text">r4frf</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-04-2016</span>
+    <span class="text">wderferf</span>
+    <span class="score">60</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">jojojo</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">Go to Gym</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">grab lunch</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="checked animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">Go to Gym</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-05-2016</span>
+    <span class="text">Take Medicines</span>
+    <span class="score">40</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+
+          <li class="checked animated" inserting="false">
+    <button class="delete">×</button>
+
+
+    <input type="checkbox" class="toggle-checked">
+
+    <span class="text">10-06-2016</span>
+    <span class="text">buy gopro</span>
+    <span class="score">60</span>
+
+
+   <a href="http://localhost:3000/edithabit">edit</a>
+
+  </li>
+
+        
+    
+  
+      </ul>
+      
+</span>
+
+<h1> last 7 days </h1>
+
+</div>​
+
+<footer class="footer">
+<div id="container-floating">
+
+  <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>
+  <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
+    <p class="letter">C</p>
+  </div>
+  <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder"><img class="reminder" src="./HabitU_files/ic_reminders_speeddial_white_24dp.png"></div>
+  <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="luka@habitu.com"><img class="reminder">
+    <p class="letter">E</p>
+  </div>
+
+
+  <div id="floating-button" class="addadd" data-toggle="tooltip" data-placement="left" data-original-title="Create">
+  <a href="http://localhost:3000/addhabit"><p class="plus">+</p><img class="edit" src="./HabitU_files/bt_compose2_1x.png"></a>  
+
+  </div>
+
+</div>
+    <h1>NaN</h1>
+
+<a href="http://localhost:3000/charts">CHARTS</a>
+</footer></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

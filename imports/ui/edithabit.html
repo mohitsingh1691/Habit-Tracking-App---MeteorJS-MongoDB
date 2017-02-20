@@ -1,0 +1,48 @@
+
+
+<template name="edithabit">
+
+  <div class="animated flipInY">
+    <div class="container">
+    <div class="card"></div>
+  <div class="card">
+
+    <div class="space">
+    </div>
+    <h1 class="title">Edit Habit</h1>
+
+     <form class="edit-task">
+<div class="input-container">
+         <input type="text" name="text1" value="{{cur_value}}" maxlength="25"/>
+
+         <div class="bar"></div>
+       </div>
+       <ul class="rbutton">
+         <li>
+           <input type="radio"  id="low" name="myRadio" value="2"/>
+             <label for="low">Low</label>
+           </li>
+           <li>
+           <input type="radio"  id="medium" name="myRadio" value="5"/>
+           <label for="medium">Medium</label>
+         </li>
+         <li>
+           <input type="radio" id="high" name="myRadio" value="10"/>
+           <label for="high">High</label>
+       </li>
+       </ul>
+       <div class="space">
+       </div>
+       <div class="space">
+       </div>
+      <div class="button-container">
+        <button><span>Update</span></button>
+      </div>
+<button class="delete">&times;</button>
+  </form>
+
+
+  </div>
+</div>
+  </div>
+</template>

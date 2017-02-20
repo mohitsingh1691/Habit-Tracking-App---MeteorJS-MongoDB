@@ -1,0 +1,66 @@
+
+<template name="nav">
+
+
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="cbp-spmenu-push">
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<h3>Menu</h3>
+			<a href="#">Celery seakale</a>
+			<a href="#">Dulse daikon</a>
+			<a href="#">Zucchini garlic</a>
+			<a href="#">Catsear azuki bean</a>
+			<a href="#">Dandelion bunya</a>
+			<a href="#">Rutabaga</a>
+		</nav>
+
+		<div>
+			<header class="clearfix">
+				<span>Blueprint</span>
+				<h1>Slide and Push Menus</h1>
+				<nav>
+					<a href="http://tympanus.net/Blueprints/QuotesRotator/" class="icon-arrow-left" data-info="previous Blueprint">Previous Blueprint</a>
+					<a href="http://tympanus.net/codrops/?p=14725" class="icon-drop" data-info="back to the Codrops article">back to the Codrops article</a>
+				</nav>
+			</header>
+			<div>
+				<section>
+					<h2>Slide Menus</h2>
+					<!-- Class "cbp-spmenu-open" gets applied to menu -->
+					<button id="showLeft">Show/Hide Left Slide Menu</button>
+
+				</section>
+
+			</div>
+		</div>
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+
+				body = document.body;
+
+			showLeft.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeft' );
+			};
+
+
+			function disableOther( button ) {
+				if( button !== 'showLeft' ) {
+					classie.toggle( showLeft, 'disabled' );
+				}
+
+			}
+		</script>

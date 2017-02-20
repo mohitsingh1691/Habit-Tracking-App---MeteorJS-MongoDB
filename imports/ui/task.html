@@ -1,0 +1,17 @@
+<template name="task">
+
+{{#if currentUser}}
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+
+
+<input type="checkbox" checked="{{checked}}" class="toggle-checked">
+   <!--<span class="text">{{formatDate checkedAt}}</span>//<a href="/edithabit/{{_id}}"></a><img src="edit.png" width="18px" height="18px">-->
+
+  <span class="score">{{val}}</span>
+  <span class="text">{{text}}</span>
+
+<div class="editbutton"><a href="/edithabit/{{_id}}"><img src="edit.png" width="20px" height="20px"></a></div>
+  </li>
+  {{/if}}
+</template>
